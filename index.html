@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Minitab</title>
+	<link rel="stylesheet" href="lib/css/reveal.css">
+	<link rel="stylesheet" href="lib/css/theme/white.css">
+	<link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css"> </head>
+
+<body>
+	<div class="multimedia">
+	<div id="show" class="invisible"></div>
+	<header>
+		<nav>
+			<div class="marco-logo"> <img id="hide" src="imgs/Minitab.jpg"> </div>
+			<ul class="menu">
+				<li id="/"><a href="#/"><i class="fa fa-home" aria-hidden="true"></i><br>Definición de la aplicación</a></li>
+				<li id="/"><a href="#/1"><i class="fa fa fa-check-square-o" aria-hidden="true"></i><br>Características de la aplicación</a></li>
+				<li id="/"><a href="#/2"><i class="fa fa fa-check-square-o" aria-hidden="true"></i><br>Entorno de trabajo</a></li>
+				<li id="/3"><a href="#/3"><i class="fa fa fa-check-square-o" aria-hidden="true"></i><br>Ventajas y Desventajas</a></li>
+				<li id="/3"><a href="#/4"><i class="fa fa fa-check-square-o" aria-hidden="true"></i><br>Importancia</a></li>
+				<li id="/3"><a href="#/5"><i class="fa fa fa-check-square-o" aria-hidden="true"></i><br>Versiones</a></li>
+				<li id="/3"><a href="#/6"><i class="fa fa fa-check-square-o" aria-hidden="true"></i><br>Utilidad dentro de la Disciplina Cursada</a></li>
+			</ul>
+			<div class="marco-miniatura">
+				<img src=""><br>Ver miniaturas
+            </div>
+		</nav>
+	</header>
+	<div id="slider" class="slider">
+	    <div class="pinch-zoom">
+		<div class="reveal">
+			<div class="slides">
+				
+					<section class="interslide"><img src="slides/slide-1.jpg"></section>
+					<section class="interslide"><img src="slides/slide-2.jpg"></section>								
+				    <section class="interslide"><img src="slides/slide-3.jpg"></section>				
+					<section class="interslide"><img src="slides/slide-4.jpg"></section>
+					<section class="interslide"><img src="slides/slide-5.jpg"></section>
+                    <section class="interslide"><img src="slides/slide-6.jpg"></section>
+                    <section class="interslide"><img src="slides/slide-7.jpg"></section>
+                                        
+                                                                             			
+
+					
+		</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	
+	<script src="lib/lib/js/head.min.js"></script>
+	<script src="lib/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			slideNumber: true
+			, center: true
+			, controls: true
+			, progress: true
+			, history: true
+		});
+		Reveal.configure({
+			slideNumber: 'c/t'
+		});
+		document.querySelector('.marco-miniatura ').addEventListener('click', function () {
+			Reveal.toggleOverview();			
+		});
+	</script>
+	<script type="text/javascript" src="lib/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="lib/pinchzoom.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.reveal').height(window.innerHeight);
+			$(window).resize(function () {
+				$('.reveal').height(window.innerHeight);
+			})
+		});
+			$(function () {
+				$('div.pinch-zoom').each(function () {
+					new RTP.PinchZoom($(this), {});
+				});
+			});
+	</script>
+	<script type="text/javascript" src="CLMStatreporter.js"></script>
+	<script>
+		function buildStats() {
+			return "{img:1}";
+		}
+		CLMStatreporter.initContext(buildStats);
+        $('#hide').click(function () {
+            $( "header" ).hide(500);
+            $( "#slider" ).animate({
+                width: "99%"
+            }, 500 );
+        })
+        $('#show').click(function () {
+            $( "header" ).show(500);
+            $( "#slider" ).animate({
+                width: "88%"
+            }, 500 );
+        })
+	</script>
+</body>
+
+</html>
