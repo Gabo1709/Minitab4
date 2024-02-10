@@ -1,0 +1,206 @@
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/Calibri.eot');
+    src: url('fonts/Calibri.eot?#iefix') format('embedded-opentype'), url('fonts/Calibri.woff2') format('woff2'), url('fonts/Calibri.woff') format('woff'), url('../fonts/Calibri.ttf') format('truetype'), url('fonts/Calibri.svg#Calibri') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.multimedia {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+header {
+	font-family: 'Calibri';
+    text-align: center;
+    font-size: 1.3vw;
+    height: 100vh;
+    background-color: #2271B3;
+    width: 10%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 10;
+}
+
+.invisible {
+    position: absolute;
+    width: 9%;
+    height: 100vh;
+    z-index: 5;
+}
+
+.marco-logo {
+	width: 100%;
+    background-color: white;
+    -webkit-box-shadow: 2px 3px 34px -5px rgba(145, 145, 145, 1);
+    -moz-box-shadow: 2px 3px 34px -5px rgba(145, 145, 145, 1);
+    box-shadow: 2px 3px 34px -5px rgba(145, 145, 145, 1);
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 0 10px;
+    top: 0;
+    left: 0;
+}
+
+.marco-logo img {
+	width: 80%;
+}
+
+.marco-miniatura {
+	position: absolute;
+    width: 94%;
+    z-index: 30;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -47%;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.marco-miniatura img {
+	width: 100%;
+	border: 1px solid #f2f2f2;
+}
+
+.menu {
+    color: white;
+    list-style: none;
+    vertical-align: middle;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.menu li {
+	display: list-item;
+	padding: 0.5vw 0;
+}
+
+.menu li a {
+	color: rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+	padding: 0 0px 10px;	
+	display: block;
+}
+.menu li:target{
+	background-color: rgba(255, 255, 255, 0.31);
+}
+.menu li:not(:last-child){
+	border-bottom: 1px solid rgba(255, 255, 255, 0.7);;
+}
+
+.menu li a i {
+	font-size: 2vw;
+    line-height: 2.5vw;
+}
+
+.menu li a:hover {
+	color: white;
+}
+
+.reveal section img {
+	margin: 0;
+	border: none;
+	box-shadow: none;
+}
+
+.reveal .slides > section, .reveal .slides > section > section {
+	    padding: 10px 0px;
+	top: 0 !important;
+}
+
+button {
+	outline: none;
+}
+
+.reveal .controls button {
+	opacity: 0.2;
+}
+
+.reveal .controls .enabled {
+	opacity: 0.8;
+}
+
+.reveal .controls .navigate-right, .reveal .controls .navigate-right.enabled {
+	border-left-color: #d02164;
+}
+
+.reveal .controls .navigate-up, .reveal .controls .navigate-up.enabled {
+	border-bottom-color: #d02164;
+}
+
+.reveal .controls .navigate-down, .reveal .controls .navigate-down.enabled {
+	border-top-color: #d02164;
+}
+
+.reveal .controls .navigate-left, .reveal .controls .navigate-left.enabled {
+	border-right-color: #d02164;
+}
+
+.reveal .controls .navigate-right.enabled:hover {
+	border-left-color: #d02164;
+	opacity: 1;
+}
+
+.reveal .controls .navigate-left.enabled:hover {
+	border-right-color: #d02164;
+	opacity: 1;
+}
+
+.reveal .controls .navigate-up.enabled:hover {
+	border-bottom-color: #d02164;
+	opacity: 1;
+}
+
+.reveal .controls .navigate-down.enabled:hover {
+	border-top-color: #d02164;
+	opacity: 1;
+}
+
+.reveal .progress span {
+	background: #d02164; 
+}
+
+.reveal .progress {
+	height: 5px;
+}
+.reveal.overview .slides section:hover, .reveal.overview .slides section.present{
+	outline: transparent;
+}
+div.page {
+    position: relative;
+    text-align: left;
+}
+
+.slider {
+	display: inline-block;
+	width: 88%;
+}
+
+div.pinch-zoom {
+    width: 100%;
+}
+
+div.pinch-zoom {
+    position: relative;
+}
+
+@media (min-width:1200px) {
+	header {
+		font-size: 1vw;
+	}
+    
+	.menu li a i {
+        font-size: 1.5vw;
+        line-height: 2vw;
+    }
+}
+
+@media (min-width:320px) and (max-width:768px) {
+	header {
+		display: none;
+	}
+}
